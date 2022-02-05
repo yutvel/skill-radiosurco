@@ -5,15 +5,15 @@ const Alexa = require('ask-sdk-core');
 
 const STREAMS = [
   {
-    "token": "stream-RadioPatito",
-    "url": 'AQUI VA LA URL DE TU STREAM -PLS,MP3,M3U,HLS sobre HTTPS',
+    "token": "stream-RadioSurco",
+    "url": 'https://icecast.teveo.cu/F9tgnJVT',
     "metadata" : {
-      "title": "Radio Patito",
-      "subtitle": "Oliver González",
+      "title": "Radio Surco",
+      "subtitle": "Yutvel Lopez",
       "art": {
         "sources": [
           {
-            "contentDescription": "Radio Patito",
+            "contentDescription": "Radio Surco",
             "url": "http://placehold.it/512x512",
             "widthPixels": 512,
             "heightPixels": 512
@@ -23,7 +23,7 @@ const STREAMS = [
       "backgroundImage": {
         "sources": [
           {
-            "contentDescription": "Radio Patito",
+            "contentDescription": "Radio Surco",
             "url": "http://placehold.it/1200x800",
             "widthPixels": 1200,
             "heightPixels": 800
@@ -66,7 +66,7 @@ const HelpIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.HelpIntent';
   },
   handle(handlerInput) {
-    const speechText = 'Esta skill reproduce una transmisión de audio cuando se inicia. No tiene ninguna funcionalidad adicional.';
+    const speechText = 'Esta skill reproduce una transmisión de audio cuando se inicia.';
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -80,7 +80,7 @@ const NextIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'AMAZON.NextIntent';
   },
   handle(handlerInput) {
-    const speechText = 'Esta skill reproduce una transmisión de audio cuando se inicia. No tiene ninguna funcionalidad adicional.';
+    const speechText = 'Esta skill reproduce una transmisión de audio cuando se inicia.';
 
     return handlerInput.responseBuilder
       .speak(speechText)
@@ -94,7 +94,7 @@ const AboutIntentHandler = {
       && handlerInput.requestEnvelope.request.intent.name === 'AboutIntent';
   },
   handle(handlerInput) {
-    const speechText = 'Esta skill reproduce una transmisión de audio cuando se inicia. no hay más que hacer.';
+    const speechText = 'Esta skill reproduce una transmisión de audio cuando se inicia.';
 
     return handlerInput.responseBuilder
       .speak(speechText)
